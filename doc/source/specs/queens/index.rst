@@ -23,4 +23,4 @@ Queens approved (but not implemented) specs:
    :glob:
    :maxdepth: 1
 
-..   approved/*
+   approved/*

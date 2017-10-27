@@ -4,6 +4,8 @@
 
  http://creativecommons.org/licenses/by/3.0/legalcode
 
+.. _service-agent-domain:
+
 ===========================================
 Service Domain for Self Service Agent Users
 ===========================================

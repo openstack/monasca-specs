@@ -28,7 +28,7 @@ Essential Priorities
 +---------------------------------------------+-----------------------------+
 | `Support Python 3.5 (Community Goal)`_      | witek, sc                   |
 +---------------------------------------------+-----------------------------+
-| `Split Tempest Plugins (Community Goal)`_   |                             |
+| `Split Tempest Plugins (Community Goal)`_   | chandankumar                |
 +---------------------------------------------+-----------------------------+
 
 High Priorities

@@ -26,6 +26,7 @@ Here you can find the specs, and spec template, for each release:
    :maxdepth: 1
 
    specs/queens/index
+   specs/rocky/index
 
 There are also some approved backlog specifications that are looking for
 owners:

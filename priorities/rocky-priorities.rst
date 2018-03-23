@@ -39,7 +39,7 @@ High Priorities
 +---------------------------------------------+-------------------------+
 | Title                                       | Owners                  |
 +=============================================+=========================+
-| Templating webhook notifications            | dougsz                  |
+| `Templating webhook notifications`_         | dougsz                  |
 +---------------------------------------------+-------------------------+
 | :ref:`service-agent-domain`                 | jgr                     |
 +---------------------------------------------+-------------------------+
@@ -64,9 +64,9 @@ Optional Priorities
 +---------------------------------------------+-------------------------+
 | Create Docker images from OpenStack repos   |                         |
 +---------------------------------------------+-------------------------+
-| Kolla deployment                            | dougsz                  |
+| `Kolla deployment`_                         | dougsz                  |
 +---------------------------------------------+-------------------------+
-| Query logs pipeline                         | dougsz                  |
+| `Query logs pipeline`_                      | dougsz                  |
 +---------------------------------------------+-------------------------+
 | New monasca-thresh                          |                         |
 +---------------------------------------------+-------------------------+
@@ -112,3 +112,28 @@ monsasca-ceilometer `merged into the Ceilometer`_ repository.  This could reduce
 future workload in maintenance.
 
 .. _merged into the Ceilometer: https://storyboard.openstack.org/#!/story/2001239
+
+Templating webhook notifications
+--------------------------------
+
+Improve the quality of notifications generated from alerts. We want notifications
+to be informative, concise and flexible.
+
+Kolla deployment
+----------------
+
+Add support for deploying Monasca in Docker containers using the OpenStack Kolla
+project. This change will support deploying Monasca in a high availability
+configuration. Blueprints exist for `containers`_ and the `Ansible roles`_ to deploy
+them.
+
+.. _containers: https://blueprints.launchpad.net/kolla/+spec/monasca-containers
+.. _Ansible roles: https://blueprints.launchpad.net/kolla-ansible/+spec/monasca-roles
+
+Query logs pipeline
+-------------------
+
+`Add support`_ for querying ElasticSearch via the Monasca Log API to support tenant
+scoped access to logs. This should include accessing the logs via Grafana.
+
+.. _Add support: https://blueprints.launchpad.net/monasca/+spec/log-query-api

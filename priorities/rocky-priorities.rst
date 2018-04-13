@@ -16,7 +16,7 @@ Essential Priorities
 +-----------------------------------------------+-----------------------------+
 | Title                                         | Owners                      |
 +===============================================+=============================+
-| Kafka upgrade                                 |                             |
+| `Kafka upgrade`_                              | witek                       |
 +-----------------------------------------------+-----------------------------+
 | Alembic migrations                            | jgr, amofakhar              |
 +-----------------------------------------------+-----------------------------+
@@ -75,6 +75,14 @@ Optional Priorities
 
 Details
 ~~~~~~~
+
+Kafka upgrade
+-----------------------------------
+
+The goal is to upgrade all Monasca components to use Apache Kafka 1.0.x.
+Currently used embedded forked version of kafka-python client should be
+replaced with pykafka (or alternatively confluent-kafka-python). The
+integration should be preceded by extensive performance and endurance testing.
 
 Run API under WSGi
 -----------------------------------

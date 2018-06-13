@@ -18,7 +18,7 @@ Essential Priorities
 +===============================================+=============================+
 | `Kafka upgrade`_                              | witek                       |
 +-----------------------------------------------+-----------------------------+
-| Alembic migrations                            | jgr, amofakhar              |
+| `Alembic migrations`_                         | jgr                         |
 +-----------------------------------------------+-----------------------------+
 | Metrics retention policy                      | jgu                         |
 +-----------------------------------------------+-----------------------------+
@@ -83,6 +83,16 @@ The goal is to upgrade all Monasca components to use Apache Kafka 1.0.x.
 Currently used embedded forked version of kafka-python client should be
 replaced with pykafka (or alternatively confluent-kafka-python). The
 integration should be preceded by extensive performance and endurance testing.
+
+Alembic migrations
+------------------
+
+The goal is to provide a consistent and easy to use way to maintain SQL schema
+changes. The implementation should allow schema initialization and migration
+from one version to another. `Alembic`_ is a lightweight database migration
+tool which optimally fulfills our requirements.
+
+.. _Alembic: http://alembic.zzzcomputing.com/en/latest/
 
 Run API under WSGi
 -----------------------------------

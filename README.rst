@@ -25,11 +25,14 @@ The layout of this repository is::
   priorities/<release>/
   specs/<release>/
 
-Where there are two sub-directories in ``specs``:
+Where there are three sub-directories in ``specs``:
 
 specs/<release>/approved
-  specifications approved, but not yet implemented
+  Specifications approved, but not yet implemented
 
 specs/<release>/implemented
-  implemented specifications
+  Implemented specifications
 
+specs/<release>/not-implemented
+  Specifications that were approved but are not expected to be implemented.
+  These are kept for historical reference.

@@ -24,3 +24,11 @@ Rocky approved (but not implemented) specs:
    :maxdepth: 1
 
    approved/*
+
+Rocky deprecated specs:
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+
+   not-implemented/*

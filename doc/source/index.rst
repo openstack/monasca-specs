@@ -27,6 +27,7 @@ Here you can find the specs, and spec template, for each release:
 
    specs/queens/index
    specs/rocky/index
+   specs/stein/index
 
 There are also some approved backlog specifications that are looking for
 owners:

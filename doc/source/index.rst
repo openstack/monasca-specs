@@ -13,6 +13,7 @@ to focus on for the upcoming release. This is the output of those discussions:
 .. toctree::
    :glob:
    :maxdepth: 1
+   :reversed:
 
    priorities/*
 
@@ -24,6 +25,7 @@ Here you can find the specs, and spec template, for each release:
 .. toctree::
    :glob:
    :maxdepth: 1
+   :reversed:
 
    specs/queens/index
    specs/rocky/index

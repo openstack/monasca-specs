@@ -133,12 +133,14 @@ Work Items
 * remove code using `pykafka`
 * remove `pykafka` from requirements and lower-constraints
 * add `confluent-kafka-python` to global-requirements
-* implement common routines in `monasca-common`
+* implement common routines in ``monasca-common``
 * use new code in:
-  * monasca-{log,events}-api
-  * monasca-persister
-  * monasca-notification
-  * monasca-transform
+
+ * ``monasca-{log,events}-api``
+ * ``monasca-persister``
+ * ``monasca-notification``
+ * ``monasca-transform``
+
 * delete old deprecated code
 
 Dependencies

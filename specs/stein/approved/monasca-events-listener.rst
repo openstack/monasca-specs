@@ -218,7 +218,6 @@ Proposed change
 
 #. Monasca Events API allows a field called 'payload' which can be in an arbitrary
    nested JSON format.
-   TODO: mappings
 
    Example Monasca Event Format:
 
@@ -394,7 +393,7 @@ Alternative Solutions
      architecture.
    * Regions may also cause separation of RabbitMQ instances that need to be monitored.
    * While it might be possible to have a service/agent in each Cell publish back to
-     a centralized to Kafka directly, our authentication and networking for Kafka was
+     a centralized Kafka directly, our authentication and networking for Kafka was
      not designed to support that.
 
 #. OpenStack Panko [5]_ is a event storage and REST API for Ceilometer and could
@@ -459,6 +458,10 @@ Performance Impact
 
 #. The proposed Monasca Event Listener is a new service, so performance is unknown.  However, the
    Monasca API has been shown to have a high performance throughput.
+
+#. If any part of the Monasca notification pipeline goes down, notifications could back-up in
+   RabbitMQ and bring down the cluster. The risk of this could be mitigated by using a
+   separate RabbitMQ instance for notifications.
 
 
 Other deployer impact

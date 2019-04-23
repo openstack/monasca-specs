@@ -702,4 +702,4 @@ https://julien.danjou.info/lessons-from-openstack-telemetry-deflation/
 http://eavesdrop.openstack.org/irclogs/%23openstack-telemetry/%23openstack-telemetry.2018-10-10.log.html
 
 [13] Ceilometer Events marked as deprecated in Stein:
-https://review.openstack.org/#/c/603336/
+https://review.opendev.org/#/c/603336/

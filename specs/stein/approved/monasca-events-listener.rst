@@ -552,7 +552,7 @@ Documentation Impact
 References
 ==========
 
-.. [1] Monasca Events API 1.0: https://git.openstack.org/cgit/openstack/monasca-events-api/
+.. [1] Monasca Events API 1.0: https://opendev.org/openstack/monasca-events-api/
 
 [2] Monasca Ceilometer project: https://github.com/openstack/monasca-ceilometer
 
@@ -576,7 +576,7 @@ References
 
 .. [12] Ceilometer Events deprecated means Panko also deprecated: http://eavesdrop.openstack.org/irclogs/%23openstack-telemetry/%23openstack-telemetry.2018-10-10.log.html
 
-.. [13] Ceilometer Events marked as deprecated in Stein: https://review.openstack.org/#/c/603336/
+.. [13] Ceilometer Events marked as deprecated in Stein: https://review.opendev.org/#/c/603336/
 
 .. [14] Nova notification version update lists services effected (see "Deprecating legacy notifications"): https://etherpad.openstack.org/p/nova-ptg-stein
 

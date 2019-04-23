@@ -308,7 +308,7 @@ Documentation Impact
 Basic installation instructions should be added here [1] and published
 to https://docs.openstack.org
 
-[1] https://git.openstack.org/cgit/openstack/monasca-api/tree/doc/source/install
+[1] https://opendev.org/openstack/monasca-api/src/branch/master/doc/source/install
 
 Now high level documentation is stored in:
 https://github.com/monasca/monasca-docker/tree/master/docs

@@ -180,7 +180,7 @@ References
 .. [4] https://cwiki.apache.org/confluence/display/KAFKA/Clients#Clients-Python
 .. [5] https://github.com/monasca/monasca-perf/blob/master/kafka_python_client_perf/monascaInvestigationKafkaPythonAPIs.md
 .. [6] http://activisiongamescience.github.io/2016/06/15/Kafka-Client-Benchmarking/
-.. [7] http://git.openstack.org/cgit/openstack/monasca-persister/commit/?id=a7112fd30bd545dd850e0e267dcceb9ea27551ad
+.. [7] https://opendev.org/openstack/monasca-persister/commit/a7112fd30bd545dd850e0e267dcceb9ea27551ad
 
 
 History

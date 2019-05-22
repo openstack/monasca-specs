@@ -12,7 +12,6 @@
 # serve to show the default.
 
 import datetime
-import subprocess
 import sys
 import os
 
@@ -29,11 +28,8 @@ sys.path.insert(0, os.path.abspath('.'))
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = ['redirect',
-              'sphinx.ext.autodoc',
               'sphinx.ext.todo',
-              'sphinx.ext.viewcode',
-              'sphinx.ext.mathjax',
-              'oslosphinx',
+              'openstackdocstheme',
               'yasfb',
              ]
 
@@ -42,15 +38,6 @@ feed_base_url = 'http://specs.openstack.org/openstack/monasca-specs'
 feed_author = 'Monasca Team'
 
 todo_include_todos = True
-
-# Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
-
-# The suffix of source filenames.
-source_suffix = '.rst'
-
-# The encoding of source files.
-#source_encoding = 'utf-8-sig'
 
 # The master toctree document.
 master_doc = 'index'
@@ -71,10 +58,10 @@ copyright = u'%s, Monasca Team' % datetime.date.today().year
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = [
-    '_build',
-    'image_src/plantuml/README.rst',
-]
+#exclude_patterns = [
+#    '_build',
+#    'image_src/plantuml/README.rst',
+#]
 
 # The reST default role (used for this markup: `text`) to use for all documents.
 #default_role = None
@@ -82,19 +69,14 @@ exclude_patterns = [
 # If true, '()' will be appended to :func: etc. cross-reference text.
 #add_function_parentheses = True
 
-# If true, the current module name will be prepended to all description
-# unit titles (such as .. function::).
-add_module_names = False
-
-# If true, sectionauthor and moduleauthor directives will be shown in the
-# output. They are ignored by default.
-show_authors = False
-
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
 
 # A list of ignored prefixes for module index sorting.
 modindex_common_prefix = ['monasca-specs.']
+
+version = ''
+release = ''
 
 # -- Options for man page output ----------------------------------------------
 man_pages = []
@@ -103,7 +85,7 @@ man_pages = []
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'nature'
+html_theme = 'openstackdocs'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -128,12 +110,6 @@ html_theme = 'nature'
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
 #html_favicon = None
-
-# If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
-# using the given strftime format.
-git_cmd = ["git", "log", "--pretty=format:'%ad, commit %h'", "--date=local",
-           "-n1"]
-html_last_updated_fmt = subprocess.check_output(git_cmd).decode('utf-8')
 
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.
@@ -172,110 +148,7 @@ html_use_index = False
 # This is the file name suffix for HTML files (e.g. ".xhtml").
 #html_file_suffix = None
 
-# Output file base name for HTML help builder.
-htmlhelp_basename = 'Monasca-Specsdoc'
+# -- openstackdocstheme configuration -----------------------------------------
 
-
-# -- Options for LaTeX output --------------------------------------------------
-
-latex_elements = {
-# The paper size ('letterpaper' or 'a4paper').
-#'papersize': 'letterpaper',
-
-# The font size ('10pt', '11pt' or '12pt').
-#'pointsize': '10pt',
-
-# Additional stuff for the LaTeX preamble.
-#'preamble': '',
-}
-
-# Grouping the document tree into LaTeX files. List of tuples
-# (source start file, target name, title, author, documentclass [howto/manual]).
-latex_documents = [
-  ('index', 'Monasca-specs.tex', u'Monasca Specs',
-   u'Monasca Team', 'manual'),
-]
-
-# The name of an image file (relative to this directory) to place at the top of
-# the title page.
-#latex_logo = None
-
-# For "manual" documents, if this is true, then toplevel headings are parts,
-# not chapters.
-#latex_use_parts = False
-
-# If true, show page references after internal links.
-#latex_show_pagerefs = False
-
-# If true, show URL addresses after external links.
-#latex_show_urls = False
-
-# Documents to append as an appendix to all manuals.
-#latex_appendices = []
-
-# If false, no module index is generated.
-#latex_domain_indices = True
-
-# -- Options for Texinfo output ------------------------------------------------
-
-# Grouping the document tree into Texinfo files. List of tuples
-# (source start file, target name, title, author,
-#  dir menu entry, description, category)
-texinfo_documents = [
-  ('index', 'Monasca-specs', u'Monasca Design Specs',
-   u'Monasca Team', 'monasca-specs', 'Design specifications for the Monasca project.',
-   'Miscellaneous'),
-]
-
-# Documents to append as an appendix to all manuals.
-#texinfo_appendices = []
-
-# If false, no module index is generated.
-#texinfo_domain_indices = True
-
-# How to display URL addresses: 'footnote', 'no', or 'inline'.
-#texinfo_show_urls = 'footnote'
-
-
-# -- Options for Epub output ---------------------------------------------------
-
-# Bibliographic Dublin Core info.
-epub_title = u'Monasca Specs'
-epub_author = u'Monasca Team'
-epub_publisher = u'Monasca Team'
-epub_copyright = u'2015, Monasca Team'
-
-# The language of the text. It defaults to the language option
-# or en if the language is not set.
-#epub_language = ''
-
-# The scheme of the identifier. Typical schemes are ISBN or URL.
-#epub_scheme = ''
-
-# The unique identifier of the text. This can be a ISBN number
-# or the project homepage.
-#epub_identifier = ''
-
-# A unique identification for the text.
-#epub_uid = ''
-
-# A tuple containing the cover image and cover page html template filenames.
-#epub_cover = ()
-
-# HTML files that should be inserted before the pages created by sphinx.
-# The format is a list of tuples containing the path and title.
-#epub_pre_files = []
-
-# HTML files shat should be inserted after the pages created by sphinx.
-# The format is a list of tuples containing the path and title.
-#epub_post_files = []
-
-# A list of files that should not be packed into the epub file.
-#epub_exclude_files = []
-
-# The depth of the table of contents in toc.ncx.
-#epub_tocdepth = 3
-
-# Allow duplicate toc entries.
-#epub_tocdup = True
-suppress_warnings = ['image.nonlocal_uri']
+repository_name = 'openstack/monasca-specs'
+use_storyboard = True

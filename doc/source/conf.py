@@ -34,7 +34,7 @@ extensions = ['redirect',
              ]
 
 # Feed configuration for yasfb
-feed_base_url = 'http://specs.openstack.org/openstack/monasca-specs'
+feed_base_url = 'https://specs.openstack.org/openstack/monasca-specs'
 feed_author = 'Monasca Team'
 
 todo_include_todos = True
@@ -70,7 +70,7 @@ copyright = u'%s, Monasca Team' % datetime.date.today().year
 #add_function_parentheses = True
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'sphinx'
+pygments_style = 'native'
 
 # A list of ignored prefixes for module index sorting.
 modindex_common_prefix = ['monasca-specs.']
@@ -150,5 +150,6 @@ html_use_index = False
 
 # -- openstackdocstheme configuration -----------------------------------------
 
-repository_name = 'openstack/monasca-specs'
-use_storyboard = True
+openstackdocs_repo_name = 'openstack/monasca-specs'
+openstackdocs_auto_name = False
+openstackdocs_use_storyboard = True
